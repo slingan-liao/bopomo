@@ -14,11 +14,12 @@ This is a package to translate a chinese article into bopomofo letters baesed on
 >>> print(bopomo_sent.bopomo_tag())
 [['如果薪水不到4萬8', 'ㄖㄨˊ ㄍㄨㄛˇ ㄒㄧㄣ ㄕㄨㄟˇ ㄅㄨˋ ㄉㄠˋ 4 ㄨㄢˋ 8'], ['可向老闆說你給的薪水太低了', 'ㄎㄜˇ ㄒㄧㄤˋ ㄌㄠˇ ㄅㄢˇ ㄕㄨㄛ ㄋㄧˇ ㄍㄟˇ ˙ㄉㄜ ㄒㄧㄣ ㄕㄨㄟˇ ㄊㄞˋ ㄉㄧ ˙ㄌㄜ']]
 
->>> sent = '有人年輕時就培養多元興趣，退休後全心投入自己喜愛的事物；有人一輩子在職場奔忙，不知興趣為何物，一旦退休每天閒得發慌。\n除了金錢的準備，心靈、健康、興趣的準備都很重要，及早作好規畫，無縫接軌，退休應該是人生另一個美好階段的開始。'
->>> bopomo_sent = bopomo.bopomo_sent(sent)
->>> bopomo = bopomo_sent.bopomo_tag()
->>> for i in range(len(bopomo)):
-...     print(bopomo[i])
+>>> article = '有人年輕時就培養多元興趣，退休後全心投入自己喜愛的事物；有人一輩子在職場奔忙，不知興趣為何物，一旦退休每天閒得發慌。\n除了金錢的準備，心靈、健康、興趣的準備都很重要，及早作好規畫，無縫接軌，退休應該是人生另一個美好階段的開始。'
+>>> bopomo_article = bopomo.bopomo_sent(sent)
+>>> bopomo_list = bopomo_article.bopomo_tag()
+>>> for i in range(len(bopomo_list)):
+...     print(bopomo_list[i])
+
 ['有人年輕時就培養多元興趣', 'ㄧㄡˇ ㄖㄣˊ ㄋㄧㄢˊ ㄑㄧㄥ ㄕˊ ㄐㄧㄡˋ ㄆㄟˊ ㄧㄤˇ ㄉㄨㄛ ㄩㄢˊ ㄒㄧㄥˋ ㄑㄩˋ']
 ['退休後全心投入自己喜愛的事物', 'ㄊㄨㄟˋ ㄒㄧㄡ ㄏㄡˋ ㄑㄩㄢˊ ㄒㄧㄣ ㄊㄡˊ ㄖㄨˋ ㄗˋ ㄐㄧˇ ㄒㄧˇ ㄞˋ ˙ㄉㄜ ㄕˋ ㄨˋ']
 ['有人一輩子在職場奔忙', 'ㄧㄡˇ ㄖㄣˊ ㄧ ㄅㄟˋ ˙ㄗ ㄗㄞˋ ㄓˊ ㄔㄤˇ ㄅㄣ ㄇㄤˊ']
